@@ -37,8 +37,11 @@ bot.on("ready", function(evt) {
 });
 
 bot.on("message", function(user, userID, channelID, message, evt) {
-    if (message.substring(0, 3) == "!ga") {
-        var query = message.substring(4);
+    if (
+        message.substring(0, 3) == "!ga" ||
+        message.substring(0, message.indexOf(" ")) == "<@" + bot.id + ">"
+    ) {
+        var query = message.substring(message.indexOf(" ") + 1);
         if (isEmpty(query)) {
             bot.sendMessage({
                 to: channelID,
@@ -56,10 +59,7 @@ bot.on("message", function(user, userID, channelID, message, evt) {
         assistant.start(config.conversation, conversation => {
             conversation
                 .on("response", text => {
-                    bot.sendMessage({
-                        to: channelID,
-                        message: text
-                    });
+                    bot.sendMessage({ to: channelID, message: text });
                 })
                 .on("ended", (error, continueConversation) => {
                     // once the conversation is ended, see if we need to follow up
