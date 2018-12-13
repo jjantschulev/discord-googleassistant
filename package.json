@@ -1,23 +1,23 @@
 {
-  "name": "assistant",
-  "version": "1.0.0",
-  "description": "Google Assistant for discord!!!",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/kraken22/discord-googleassistant.git"
-  },
-  "author": "Jordan Jantschulev <j.jantschulev@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kraken22/discord-googleassistant/issues"
-  },
-  "homepage": "https://github.com/kraken22/discord-googleassistant#readme",
-  "dependencies": {
-    "discord.io": "^2.5.3",
-    "winston": "^3.1.0"
-  }
+    "name": "assistant",
+    "version": "1.0.0",
+    "description": "Google Assistant for discord!!!",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/kraken22/discord-googleassistant.git"
+    },
+    "author": "Jordan Jantschulev <j.jantschulev@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kraken22/discord-googleassistant/issues"
+    },
+    "homepage": "https://github.com/kraken22/discord-googleassistant#readme",
+    "dependencies": {
+        "discord.io": "github:woor/discord.io#gateway_v6",
+        "google-assistant": "^0.5.2"
+    }
 }
